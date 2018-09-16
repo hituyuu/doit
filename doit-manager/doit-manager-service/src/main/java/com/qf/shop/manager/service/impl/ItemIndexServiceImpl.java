@@ -29,9 +29,9 @@ public class ItemIndexServiceImpl implements ItemIndexService {
 
     @Override
     public List<ItemIndex> listAll() {
-
-
-        List<ItemIndex> list=new ArrayList<ItemIndex>(1024);
+        //不能直接用1024数字作为参数,因为不能出现魔法值
+        int initialCapacity=1024;
+        List<ItemIndex> list=new ArrayList<ItemIndex>(initialCapacity);
         System.out.println("service层访问了");
 
 
