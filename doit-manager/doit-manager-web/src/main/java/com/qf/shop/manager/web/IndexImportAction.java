@@ -23,11 +23,14 @@ import java.util.List;
 @Controller
 public class IndexImportAction {
 
-    private Logger logger=LoggerFactory.getLogger(this.getClass());
+    /**
+     * 代码规范, = 前后都要空一格
+     * 类的成员变量的注释要用javadoc的形式
+     */
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     ItemIndexService service;
-
 
     @RequestMapping(value = "/item/indexlib/import",method = RequestMethod.POST)
     @ResponseBody
@@ -36,10 +39,11 @@ public class IndexImportAction {
         System.out.println("控制器访问了");
         ResultMessage resultMessage=new ResultMessage();
 
-
+        // 空行不能过多,一行就够
         try {
             List<ItemIndex> list = service.listAll();
-            //resultMessage.setData(list);
+            // 对于代码的注释,需要解释原因.此处为暂时不需要传输该数据
+            // resultMessage.setData(list);
             resultMessage.setSuccess(true);
             resultMessage.setMessage("success");
         } catch (Exception e) {
@@ -48,7 +52,6 @@ public class IndexImportAction {
             resultMessage.setSuccess(false);
             resultMessage.setMessage("failed");
         }
-
 
         return resultMessage;
     }
