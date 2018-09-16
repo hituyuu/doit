@@ -12,6 +12,7 @@
         <module name="doit-manager-pojo" />
         <module name="doit-manager-service" />
         <module name="doit-manager-web" />
+        <module name="doit-search-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
@@ -24,6 +25,7 @@
       <module name="doit-manager-web" target="1.8" />
       <module name="doit-parent" target="1.8" />
       <module name="doit-portal" target="1.8" />
+      <module name="doit-search-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

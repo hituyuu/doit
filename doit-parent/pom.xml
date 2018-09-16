@@ -13,6 +13,7 @@
         <module>../doit-common</module>
         <module>../doit-manager</module>
         <module>../doit-portal</module>
+        <module>../doit-search-web</module>
     </modules>
     <!--打包方式-->
     <!--用于继承maven工程-->

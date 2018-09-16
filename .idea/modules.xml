@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/doit-manager/doit-manager-web/doit-manager-web.iml" filepath="$PROJECT_DIR$/doit-manager/doit-manager-web/doit-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/doit-parent/doit-parent.iml" filepath="$PROJECT_DIR$/doit-parent/doit-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/doit-portal/doit-portal.iml" filepath="$PROJECT_DIR$/doit-portal/doit-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit-search-web/doit-search-web.iml" filepath="$PROJECT_DIR$/doit-search-web/doit-search-web.iml" />
     </modules>
   </component>
 </project>
