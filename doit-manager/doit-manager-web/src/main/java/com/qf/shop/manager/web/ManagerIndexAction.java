@@ -32,3 +32,4 @@ public class ManagerIndexAction {
         return "pages/" + pageName1 + "/" + pageName2;
     }
 }
+

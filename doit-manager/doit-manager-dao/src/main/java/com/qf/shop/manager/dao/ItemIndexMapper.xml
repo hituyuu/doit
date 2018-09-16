@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.shop.manager.dao.ItemIndexMapper" >
+  <sql id="basesql">
+    i.id,i.title,i.sell_point AS sellPoint,i.price,i.image,tc.name AS catName
+  </sql>
+
+  <select id="listAllIndex" resultType="com.qf.shop.manager.pojo.vo.ItemIndex">
+    SELECT <include refid="basesql"></include>
+    FROM tb_item i
+    LEFT JOIN tb_item_cat tc
+    ON i.cid=tc.id
+    WHERE i.status=1
+  </select>
+</mapper>
