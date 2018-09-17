@@ -34,7 +34,7 @@ public class SolrServiceImpl implements SolrService {
         solrQuery.addHighlightField("item_title");
         solrQuery.setHighlightSimplePre("<em style='color:red'>");
         solrQuery.setHighlightSimplePost("</em>");
-        IndexResultDTO result = dao.listAll(solrQuery,pageInfo);
+        IndexResultDTO result = dao.listAll(solrQuery, pageInfo);
         return result;
     }
 }
