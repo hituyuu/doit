@@ -2,7 +2,7 @@ package com.qf.shop.search.service.impl;
 
 import com.qf.shop.common.pojo.dto.PageInfo;
 import com.qf.shop.search.dao.SolrDao;
-import com.qf.shop.search.pojo.dto.IndexResult;
+import com.qf.shop.search.pojo.dto.IndexResultDTO;
 import com.qf.shop.search.service.SolrService;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class SolrServiceImpl implements SolrService {
     SolrDao dao;
 
     @Override
-    public IndexResult listAll(String keyword, PageInfo pageInfo) {
+    public IndexResultDTO listAll(String keyword, PageInfo pageInfo) {
         System.out.println("service层执行了");
 
         SolrQuery solrQuery = new SolrQuery();
@@ -34,7 +34,7 @@ public class SolrServiceImpl implements SolrService {
         solrQuery.addHighlightField("item_title");
         solrQuery.setHighlightSimplePre("<em style='color:red'>");
         solrQuery.setHighlightSimplePost("</em>");
-        IndexResult result = dao.listAll(solrQuery,pageInfo);
+        IndexResultDTO result = dao.listAll(solrQuery,pageInfo);
         return result;
     }
 }

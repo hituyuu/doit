@@ -2,7 +2,7 @@ package com.qf.shop.search.web;
 
 import com.qf.shop.common.core.PropKit;
 import com.qf.shop.common.pojo.dto.PageInfo;
-import com.qf.shop.search.pojo.dto.IndexResult;
+import com.qf.shop.search.pojo.dto.IndexResultDTO;
 import com.qf.shop.search.pojo.vo.TbItemIndex;
 import com.qf.shop.search.service.SolrService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +45,7 @@ public class SearchSolrAction {
         Integer pageSize = PropKit.use("file.properties").getInt("search.pagesize");
         pageInfo.setLimit(pageSize);
 
-        IndexResult result=solrService.listAll(keyword,pageInfo);
+        IndexResultDTO result=solrService.listAll(keyword,pageInfo);
         List<TbItemIndex> list = result.getList();
         model.addAttribute("list", list);
         return "index";

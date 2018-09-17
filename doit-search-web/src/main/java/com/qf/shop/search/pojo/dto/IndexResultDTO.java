@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by yby on 2018/9/16.
  */
-public class IndexResult {
+public class IndexResultDTO {
     // 查询结果总数
     private long recordCount;
     // 查询结果总页数

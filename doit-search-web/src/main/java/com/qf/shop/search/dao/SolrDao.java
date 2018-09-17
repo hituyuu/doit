@@ -1,7 +1,7 @@
 package com.qf.shop.search.dao;
 
 import com.qf.shop.common.pojo.dto.PageInfo;
-import com.qf.shop.search.pojo.dto.IndexResult;
+import com.qf.shop.search.pojo.dto.IndexResultDTO;
 import com.qf.shop.search.pojo.vo.TbItemIndex;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
@@ -27,10 +27,10 @@ public class SolrDao {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public IndexResult listAll(SolrQuery solrQuery, PageInfo pageInfo) {
+    public IndexResultDTO listAll(SolrQuery solrQuery, PageInfo pageInfo) {
 
         System.out.println("dao层执行了");
-        IndexResult result = new IndexResult();
+        IndexResultDTO result = new IndexResultDTO();
         try {
             // 查询solr库
             QueryResponse response = solrServer.query(solrQuery);
