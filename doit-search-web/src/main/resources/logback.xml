@@ -9,4 +9,6 @@
     <root level="info">
         <appender-ref ref="STDOUT" />
     </root>
+
+    <logger name="com.qf.shop.search.dao" level="DEBUG"/>
 </configuration>

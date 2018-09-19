@@ -1,6 +1,7 @@
 package com.qf.shop.manager.pojo.vo;
 
 /**
+ * 该类用于展示前端页面所需要的字段
  * Created by Administrator on 2018/9/15.
  */
 public class ItemIndex {
