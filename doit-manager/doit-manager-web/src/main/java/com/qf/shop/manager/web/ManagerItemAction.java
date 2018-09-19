@@ -132,4 +132,42 @@ public class ManagerItemAction {
         return resultMessage;
 
     }
+
+    /**
+     * 该控制器用于简单测试,
+     * @param itemIndex
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/itemtest", method = RequestMethod.GET)
+    public ResultMessage saveItemTest(ItemIndex itemIndex){
+        System.out.println("添加商品控制器访问了,新商品id->"+itemIndex.getId());
+        ResultMessage resultMessage = new ResultMessage();
+
+        try {
+            // 简单测试前端请求中的数据,并返送消息进入mq
+            jmsTemplate.send(topicDestination, new MessageCreator() {
+                @Override
+                public Message createMessage(Session session) throws JMSException {
+                    System.out.println("生产消息方法被访问了");
+                    // 改匿名内部类返回真正的消息,需包含商品id信息
+                    // 但是消息队列的消息不能是普通的String,而是TextMessage类
+                    TextMessage textMessage = session.createTextMessage(itemIndex.getId()+"");
+                    return textMessage;
+                }
+            });
+
+            resultMessage.setMessage("success");
+            resultMessage.setSuccess(true);
+
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
+            e.printStackTrace();
+            resultMessage.setMessage("failed");
+            resultMessage.setSuccess(false);
+        }
+
+        return resultMessage;
+
+    }
 }

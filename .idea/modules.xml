@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/doit-common/doit-common.iml" filepath="$PROJECT_DIR$/doit-common/doit-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit-item_web/doit-item_web.iml" filepath="$PROJECT_DIR$/doit-item_web/doit-item_web.iml" />
       <module fileurl="file://$PROJECT_DIR$/doit-manager/doit-manager.iml" filepath="$PROJECT_DIR$/doit-manager/doit-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/doit-manager/doit-manager-dao/doit-manager-dao.iml" filepath="$PROJECT_DIR$/doit-manager/doit-manager-dao/doit-manager-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/doit-manager/doit-manager-interface/doit-manager-interface.iml" filepath="$PROJECT_DIR$/doit-manager/doit-manager-interface/doit-manager-interface.iml" />

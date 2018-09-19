@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qf.shop.item.dao.TbItemFtlMapper">
+
+  <select id="getByItemId" parameterType="_long" resultType="com.qf.shop.item.pojo.vo.TbItemIndex">
+    SELECT id, title, sell_point as sellPoint, price FROM tb_item
+    WHERE id = #{id}
+  </select>
+</mapper>
