@@ -15,6 +15,8 @@
         <module>../doit-portal</module>
         <module>../doit-search-web</module>
         <module>../doit-item_web</module>
+        <module>../doit-provider</module>
+        <module>../doit-consumer</module>
     </modules>
     <!--打包方式-->
     <!--用于继承maven工程-->
